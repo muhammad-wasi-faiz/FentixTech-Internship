@@ -1,0 +1,315 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+color:#4a5a66;
+background:#eef2f5;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+.header{
+background:#ffffff;
+padding:20px 0;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:24px;
+letter-spacing:2px;
+color:#5c6f7c;
+}
+
+.nav a{
+text-decoration:none;
+margin-left:30px;
+font-size:14px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#5c6f7c;
+}
+
+.nav a:hover{
+color:#2f3e46;
+}
+
+.hero{
+height:80vh;
+background:url('https://picsum.photos/1600/900?image=1043') center/cover no-repeat;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.6);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero h1{
+font-family:'Playfair Display',serif;
+font-size:64px;
+font-weight:400;
+margin-bottom:20px;
+color:#425a67;
+}
+
+.hero p{
+letter-spacing:3px;
+text-transform:uppercase;
+font-size:14px;
+color:#6c7f8c;
+}
+
+.gallery-section{
+padding:80px 0;
+}
+
+.gallery-nav{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-bottom:60px;
+flex-wrap:wrap;
+}
+
+.gallery-nav button{
+background:none;
+border:none;
+font-size:14px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#6c7f8c;
+cursor:pointer;
+padding-bottom:5px;
+}
+
+.gallery-nav .active{
+border-bottom:2px solid #6c7f8c;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+.item{
+position:relative;
+overflow:hidden;
+}
+
+.item img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:transform .5s ease;
+}
+
+.item:hover img{
+transform:scale(1.1);
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+padding:20px;
+background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);
+color:#ffffff;
+opacity:0;
+transition:.4s ease;
+}
+
+.item:hover .overlay{
+opacity:1;
+}
+
+.overlay h3{
+font-family:'Playfair Display',serif;
+font-size:20px;
+margin-bottom:5px;
+}
+
+.overlay span{
+font-size:12px;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+
+.about-section{
+padding:100px 0;
+background:#f7f9fb;
+}
+
+.about-container{
+display:flex;
+align-items:center;
+gap:60px;
+}
+
+.about-text{
+flex:1;
+}
+
+.about-text h2{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:30px;
+color:#425a67;
+}
+
+.about-text p{
+margin-bottom:20px;
+font-size:15px;
+color:#5c6f7c;
+}
+
+.about-image{
+flex:1;
+}
+
+.about-image img{
+width:100%;
+border-radius:5px;
+}
+
+.contact-section{
+padding:100px 0;
+}
+
+.contact-container{
+text-align:center;
+}
+
+.contact-container h2{
+font-family:'Playfair Display',serif;
+font-size:40px;
+margin-bottom:40px;
+color:#425a67;
+}
+
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+input,textarea{
+padding:15px;
+border:1px solid #d5dde3;
+font-size:14px;
+width:100%;
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+button{
+padding:15px;
+border:none;
+background:#5c6f7c;
+color:#ffffff;
+text-transform:uppercase;
+letter-spacing:2px;
+cursor:pointer;
+}
+
+button:hover{
+background:#425a67;
+}
+
+.footer{
+background:#ffffff;
+padding:30px 0;
+text-align:center;
+font-size:14px;
+color:#6c7f8c;
+}
+
+@media (max-width:1199px){
+
+.gallery-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.about-container{
+flex-direction:column;
+text-align:center;
+}
+
+}
+
+@media (max-width:767px){
+
+.nav-container{
+flex-direction:column;
+gap:15px;
+}
+
+.nav a{
+margin-left:15px;
+}
+
+.hero{
+height:60vh;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+.gallery-grid{
+grid-template-columns:1fr;
+}
+
+.gallery-nav{
+gap:20px;
+}
+
+.about-text h2,
+.contact-container h2{
+font-size:28px;
+}
+
+}
