@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>whitespace - Get More Done</title>
+
+<meta name="description" content="whitespace is the project management software that lets your team collaborate, plan, analyze and manage daily tasks seamlessly. Get started for free today.">
+  <meta name="keywords" content="project management, collaboration, notes app, task manager, whitespace">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link href="style.css" rel="stylesheet">
+
+  <style>
+    
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #043873;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4F9CF9;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FFE492;
+    }
+  </style>
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased overflow-x-hidden">
+
+<header class="bg-brandDark sticky top-0 z-50 transition-all duration-300 border-b border-blue-900/40">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="relative w-8 h-8 flex items-center justify-center bg-brandBlue rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300">
+          
+            <svg class="w-5 h-5 text-white" viewBox="0 0 100 100" fill="none">
+              <path d="M 30 30 H 42 Q 46 30, 45 33 L 29 49 Q 26 50, 26 46 V 34 Q 26 30, 30 30 Z" fill="currentColor" />
+              <path d="M 70 30 H 58 Q 54 30, 55 33 L 71 49 Q 74 50, 74 46 V 34 Q 74 30, 70 30 Z" fill="currentColor" />
+              <path d="M 47 37 Q 50 34, 53 37 L 72 56 Q 74 58, 74 61 V 69 Q 74 72, 71 72 L 53 51 Q 50 48, 47 51 L 29 72 Q 26 72, 26 69 V 61 Q 26 58, 28 56 Z" fill="currentColor" />
+            </svg>
+        </div>
+        <span class="text-white text-2xl font-black tracking-tight group-hover:text-brandBlue transition-colors">whitespace</span>
+      </a>
+
+<div class="hidden md:flex items-center gap-8 text-white font-medium">
+        
+        <div class="relative group">
+          <button class="flex items-center gap-1 hover:text-brandYellow transition-colors py-2 focus:outline-none">
+            Products
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="absolute left-0 top-full mt-2 w-48 bg-white rounded-xl shadow-2xl py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50 border border-gray-100">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brandGray hover:text-brandBlue rounded-lg mx-2 transition-all">Document Editor</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brandGray hover:text-brandBlue rounded-lg mx-2 transition-all">Task Manager</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brandGray hover:text-brandBlue rounded-lg mx-2 transition-all">Integrations</a>
+          </div>
+        </div>
+
+<div class="relative group">
+          <button class="flex items-center gap-1 hover:text-brandYellow transition-colors py-2 focus:outline-none">
+            Solutions
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="absolute left-0 top-full mt-2 w-48 bg-white rounded-xl shadow-2xl py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50 border border-gray-100">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brandGray hover:text-brandBlue rounded-lg mx-2 transition-all">For Teams</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brandGray hover:text-brandBlue rounded-lg mx-2 transition-all">For Education</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brandGray hover:text-brandBlue rounded-lg mx-2 transition-all">For Enterprises</a>
+          </div>
+        </div>
+
+<div class="relative group">
+          <button class="flex items-center gap-1 hover:text-brandYellow transition-colors py-2 focus:outline-none">
+            Resources
+            <svg class="w-4 h-4 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="absolute left-0 top-full mt-2 w-48 bg-white rounded-xl shadow-2xl py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-50 border border-gray-100">
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brandGray hover:text-brandBlue rounded-lg mx-2 transition-all">Help Center</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brandGray hover:text-brandBlue rounded-lg mx-2 transition-all">Blog</a>
+            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-brandGray hover:text-brandBlue rounded-lg mx-2 transition-all">Guides</a>
+          </div>
+        </div>
+
+        <a href="#pricing" class="hover:text-brandYellow transition-colors">Pricing</a>
+      </div>
+
+<div class="hidden md:flex items-center gap-4">
+        <a href="#" class="bg-brandYellow hover:bg-yellow-400 text-brandDark px-6 py-2.5 rounded-lg font-bold transition-all hover:scale-105 active:scale-95 shadow-md">
+          Login
+        </a>
+        <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-6 py-2.5 rounded-lg font-medium inline-flex items-center gap-2 transition-all hover:scale-105 active:scale-95 hover:gap-3 shadow-md">
+          Try whitespace free
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+<input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+      <label for="mobile-menu-toggle" class="md:hidden cursor-pointer text-white z-50 p-2 hover:bg-blue-900/50 rounded-lg transition-colors">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" class="peer-checked:hidden"></path>
+        </svg>
+      </label>
+
+<div class="fixed inset-0 bg-brandDark hidden peer-checked:flex flex-col items-center justify-center gap-8 z-40 md:hidden transition-all duration-300">
+        
+        <label for="mobile-menu-toggle" class="absolute top-6 right-6 cursor-pointer text-white p-2">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+        </label>
+        
+        <a href="#" class="text-white text-2xl font-bold hover:text-brandYellow transition-colors">Products</a>
+        <a href="#" class="text-white text-2xl font-bold hover:text-brandYellow transition-colors">Solutions</a>
+        <a href="#" class="text-white text-2xl font-bold hover:text-brandYellow transition-colors">Resources</a>
+        <a href="#pricing" class="text-white text-2xl font-bold hover:text-brandYellow transition-colors">Pricing</a>
+        
+        <div class="flex flex-col items-center gap-4 w-full px-12 mt-6">
+          <a href="#" class="bg-brandYellow hover:bg-yellow-400 text-brandDark w-full text-center py-3 rounded-lg font-bold transition-all shadow-md">
+            Login
+          </a>
+          <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white w-full text-center py-3 rounded-lg font-medium inline-flex items-center justify-center gap-2 transition-all shadow-md">
+            Try whitespace free
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<section class="relative bg-brandDark text-white overflow-hidden py-20 lg:py-32">
+    
+    <div class="absolute inset-0 opacity-15 pointer-events-none">
+      <svg class="absolute right-0 top-1/2 -translate-y-1/2 w-[80%] h-full text-blue-300" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 200C250 100 350 450 600 300" stroke="currentColor" stroke-width="3" stroke-dasharray="10 10"/>
+        <path d="M50 300C200 200 400 500 650 350" stroke="currentColor" stroke-width="2"/>
+        <path d="M150 150C300 50 300 400 550 250" stroke="currentColor" stroke-width="1"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+      
+      <div class="space-y-8">
+        <h1 class="text-5xl lg:text-6xl font-extrabold leading-tight">
+          Get More Done with <span class="relative inline-block">
+            whitespace
+            
+            <svg class="absolute -bottom-2 left-0 w-full h-3 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 7 C 30 7, 70 2, 97 5" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h1>
+        <p class="text-blue-100/80 text-lg lg:text-xl font-light leading-relaxed max-w-xl">
+          Project management software that lets your team collaborate, plan, analyze and manage daily tasks.
+        </p>
+        <div>
+          <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-xl hover:gap-4 group">
+            Try Whitespace free
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+
+<div class="w-full aspect-[4/3] bg-brandLightBlue/95 rounded-2xl border-2 border-dashed border-blue-300 shadow-2xl relative flex items-center justify-center overflow-hidden hover:scale-[1.01] transition-transform duration-300 group">
+        
+        <div class="absolute inset-4 bg-white/70 backdrop-blur-md rounded-xl p-6 flex flex-col justify-between shadow-inner">
+          <div class="flex justify-between items-center border-b border-gray-100 pb-4">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 bg-red-400 rounded-full"></span>
+              <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+              <span class="w-3 h-3 bg-green-400 rounded-full"></span>
+            </div>
+            <div class="h-4 w-32 bg-gray-200 rounded-full"></div>
+          </div>
+          <div class="flex-1 py-4 flex flex-col gap-3">
+            <div class="h-6 w-3/4 bg-gray-300 rounded-lg"></div>
+            <div class="h-4 w-5/6 bg-gray-200 rounded-md"></div>
+            <div class="h-4 w-1/2 bg-gray-200 rounded-md"></div>
+            <div class="grid grid-cols-3 gap-3 mt-4">
+              <div class="h-12 bg-blue-100 rounded-lg border border-blue-200"></div>
+              <div class="h-12 bg-yellow-100 rounded-lg border border-yellow-200"></div>
+              <div class="h-12 bg-emerald-100 rounded-lg border border-emerald-200"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="space-y-6 lg:max-w-xl">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-brandDarkNavy tracking-tight">
+          Project <span class="relative inline-block">
+            Management
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 5 C 30 5, 70 2, 97 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Images, videos, PDFs and audio files are supported. Customize your work templates and workflows. Share team files in a clean and beautiful folder hierarchy.
+        </p>
+        <div class="pt-4">
+          <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20 group">
+            Get Started
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+
+<div class="w-full aspect-[4/3] bg-brandLightBlue/95 rounded-2xl shadow-xl relative border border-gray-100 overflow-hidden flex items-center justify-center group hover:scale-[1.01] transition-transform duration-300">
+        
+        <div class="absolute inset-4 bg-white rounded-xl shadow-md p-6 flex gap-4">
+          
+          <div class="w-1/4 border-r border-gray-100 pr-4 flex flex-col gap-4">
+            <div class="w-8 h-8 bg-blue-100 rounded-lg"></div>
+            <div class="h-4 w-full bg-gray-100 rounded-md"></div>
+            <div class="h-4 w-5/6 bg-gray-100 rounded-md"></div>
+            <div class="h-4 w-2/3 bg-gray-100 rounded-md"></div>
+          </div>
+          
+          <div class="flex-1 flex flex-col gap-4">
+            <div class="flex justify-between items-center">
+              <div class="h-6 w-1/3 bg-gray-200 rounded-md"></div>
+              <div class="w-6 h-6 bg-brandBlue/20 rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-2 gap-4 flex-1">
+              <div class="bg-gray-50 rounded-lg border border-dashed border-gray-200 p-3 flex flex-col justify-between">
+                <div class="h-4 w-full bg-gray-200 rounded"></div>
+                <div class="h-3 w-1/2 bg-gray-100 rounded"></div>
+              </div>
+              <div class="bg-gray-50 rounded-lg border border-dashed border-gray-200 p-3 flex flex-col justify-between">
+                <div class="h-4 w-3/4 bg-gray-200 rounded"></div>
+                <div class="h-3 w-2/3 bg-gray-100 rounded"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="relative w-full aspect-square max-w-[450px] mx-auto flex items-center justify-center">
+        
+        <div class="absolute w-full h-full border-2 border-dashed border-blue-200 rounded-full"></div>
+        
+        <div class="absolute w-[70%] h-[70%] border-2 border-dashed border-blue-100 rounded-full"></div>
+
+        <div class="relative w-24 h-24 bg-white rounded-2xl shadow-2xl flex items-center justify-center z-10 border border-gray-100 hover:scale-110 transition-transform duration-300">
+          <svg class="w-12 h-12 text-brandBlue" viewBox="0 0 100 100" fill="none">
+            <path d="M 30 30 H 42 Q 46 30, 45 33 L 29 49 Q 26 50, 26 46 V 34 Q 26 30, 30 30 Z" fill="currentColor" />
+            <path d="M 70 30 H 58 Q 54 30, 55 33 L 71 49 Q 74 50, 74 46 V 34 Q 74 30, 70 30 Z" fill="currentColor" />
+            <path d="M 47 37 Q 50 34, 53 37 L 72 56 Q 74 58, 74 61 V 69 Q 74 72, 71 72 L 53 51 Q 50 48, 47 51 L 29 72 Q 26 72, 26 69 V 61 Q 26 58, 28 56 Z" fill="currentColor" />
+          </svg>
+        </div>
+
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-yellow-400 rounded-full shadow-lg border-2 border-white flex items-center justify-center">
+          <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+        </div>
+        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-emerald-400 rounded-full shadow-lg border-2 border-white flex items-center justify-center">
+          <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+        </div>
+        <div class="absolute left-[-16px] top-1/2 -translate-y-1/2 w-8 h-8 bg-red-400 rounded-full shadow-lg border-2 border-white flex items-center justify-center">
+          <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+        </div>
+        <div class="absolute right-[-16px] top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-500 rounded-full shadow-lg border-2 border-white flex items-center justify-center">
+          <span class="w-2.5 h-2.5 bg-white rounded-full"></span>
+        </div>
+
+<div class="absolute top-[18%] left-[20%] w-7 h-7 bg-cyan-400 rounded-full shadow-md border-2 border-white flex items-center justify-center"></div>
+        <div class="absolute bottom-[18%] right-[20%] w-7 h-7 bg-purple-400 rounded-full shadow-md border-2 border-white flex items-center justify-center"></div>
+      </div>
+
+<div class="space-y-6 lg:max-w-xl">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-brandDarkNavy tracking-tight">
+          Work <span class="relative inline-block">
+            together
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 5 C 30 5, 70 2, 97 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          With whitespace, share your notes with your colleagues and collaborate on them. You can also publish a note to the web and share the link with anyone.
+        </p>
+        <div class="pt-4">
+          <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20 group">
+            Try it now
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="py-20 lg:py-32 bg-brandDark text-white relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <svg class="absolute left-0 bottom-0 w-[60%] h-full text-blue-200" viewBox="0 0 400 400" fill="none">
+        <path d="M50 350 C 150 200, 300 450, 400 150" stroke="currentColor" stroke-width="2" stroke-dasharray="5 5"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+      
+      <div class="space-y-6 lg:max-w-xl">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Use as <span class="relative inline-block">
+            Extension
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 5 C 30 5, 70 2, 97 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-blue-100/80 text-lg leading-relaxed">
+          Use the web clipper extension to save page content from anywhere. Keep your research organized and handy.
+        </p>
+        <div class="pt-4">
+          <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-xl group">
+            Let's Go
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+
+<div class="w-full aspect-[4/3] bg-brandLightBlue/95 rounded-2xl shadow-2xl relative border-2 border-dashed border-blue-400 overflow-hidden flex items-center justify-center group hover:scale-[1.01] transition-transform duration-300">
+        
+        <div class="absolute inset-6 bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between">
+          <div class="flex items-center gap-3 pb-3 border-b border-gray-100">
+            <div class="w-6 h-6 bg-brandBlue rounded flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+            </div>
+            <span class="font-bold text-gray-700 text-sm">Save to Whitespace</span>
+          </div>
+          <div class="flex-1 py-4 flex flex-col gap-2">
+            <div class="h-4 bg-gray-100 rounded w-full"></div>
+            <div class="h-4 bg-gray-100 rounded w-5/6"></div>
+            <div class="h-4 bg-gray-100 rounded w-2/3"></div>
+          </div>
+          <div class="flex justify-end gap-2 pt-3 border-t border-gray-100">
+            <button class="px-4 py-1.5 bg-gray-100 text-gray-600 rounded text-xs font-semibold">Cancel</button>
+            <button class="px-4 py-1.5 bg-brandBlue text-white rounded text-xs font-semibold shadow">Save clip</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="w-full aspect-[4/3] bg-brandLightBlue/95 rounded-2xl shadow-xl relative overflow-hidden flex items-center justify-center group hover:scale-[1.01] transition-transform duration-300 order-last lg:order-first">
+        
+        <div class="absolute inset-4 bg-white rounded-xl shadow-md p-6 grid grid-cols-2 gap-4">
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-100 flex flex-col justify-between">
+            <span class="text-xs text-brandBlue font-bold tracking-wider uppercase">Plugins</span>
+            <div class="h-3 w-5/6 bg-gray-200 rounded"></div>
+            <div class="h-3 w-2/3 bg-gray-200 rounded"></div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-100 flex flex-col justify-between">
+            <span class="text-xs text-yellow-500 font-bold tracking-wider uppercase">Themes</span>
+            <div class="h-3 w-5/6 bg-gray-200 rounded"></div>
+            <div class="h-3 w-2/3 bg-gray-200 rounded"></div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-100 flex flex-col justify-between">
+            <span class="text-xs text-emerald-500 font-bold tracking-wider uppercase">Custom CSS</span>
+            <div class="h-3 w-5/6 bg-gray-200 rounded text"></div>
+            <div class="h-3 w-2/3 bg-gray-200 rounded"></div>
+          </div>
+          <div class="bg-gray-50 rounded-lg p-4 border border-gray-100 flex flex-col justify-between">
+            <span class="text-xs text-purple-500 font-bold tracking-wider uppercase">Integrations</span>
+            <div class="h-3 w-5/6 bg-gray-200 rounded"></div>
+            <div class="h-3 w-2/3 bg-gray-200 rounded"></div>
+          </div>
+        </div>
+      </div>
+
+<div class="space-y-6 lg:max-w-xl">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-brandDarkNavy tracking-tight">
+          Customise it to <span class="relative inline-block">
+            your needs
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 5 C 30 5, 70 2, 97 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Customise the app with plugins, themes and multiple integrations. It's easy to build and customise, and it can support any style you want.
+        </p>
+        <div class="pt-4">
+          <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20 group">
+            Let's Go
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="pricing" class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-brandDarkNavy tracking-tight">
+          Choose <span class="relative inline-block">
+            Your Plan
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 5 C 30 5, 70 2, 97 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-gray-600 text-lg">
+          Find a plan that fits your needs. Start with a 14-day free trial.
+        </p>
+      </div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-4 items-center">
+        
+        <div class="bg-white rounded-2xl border border-gray-200/80 p-8 lg:p-10 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between min-h-[550px] lg:scale-95 hover:scale-[0.98] group">
+          <div class="space-y-6">
+            <h3 class="text-xl font-bold text-gray-800">Free</h3>
+            <div class="space-y-2">
+              <span class="text-4xl lg:text-5xl font-extrabold text-gray-900">$0</span>
+              <p class="text-sm text-gray-500">Capture ideas and find them quickly</p>
+            </div>
+            
+            <ul class="space-y-4 pt-6 border-t border-gray-100 text-gray-700">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandBlue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">Sync up to 2 devices</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandBlue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">10 MB monthly uploads</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandBlue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">25 MB max. note size</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandBlue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">Customize templates</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="pt-8">
+            <a href="#" class="block text-center border-2 border-brandBlue text-brandDarkNavy font-bold py-3.5 px-6 rounded-xl hover:bg-brandBlue hover:text-white transition-all duration-300 hover:scale-[1.02]">
+              Get Started
+            </a>
+          </div>
+        </div>
+
+<div class="bg-brandDark text-white rounded-2xl p-8 lg:p-10 shadow-2xl relative z-10 flex flex-col justify-between min-h-[600px] border border-blue-900 lg:scale-105 hover:scale-[1.07] transition-all duration-300 group">
+          
+          <div class="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 bg-brandYellow text-brandDarkNavy px-4 py-1 rounded-full text-xs font-black tracking-widest uppercase shadow-md">
+            Recommended
+          </div>
+          
+          <div class="space-y-6">
+            <h3 class="text-xl font-bold">Personal</h3>
+            <div class="space-y-2">
+              <span class="text-4xl lg:text-5xl font-extrabold text-brandYellow">$11.99</span>
+              <p class="text-sm text-blue-200/80">Customize templates and export your notes</p>
+            </div>
+            
+            <ul class="space-y-4 pt-6 border-t border-blue-900/60 text-blue-100">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandYellow flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">Sync unlimited devices</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandYellow flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">10 GB monthly uploads</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandYellow flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">200 MB max. note size</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandYellow flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">Customize templates & themes</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandYellow flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">Offline access & sync</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="pt-8">
+            <a href="#" class="block text-center bg-brandBlue hover:bg-blue-600 text-white font-bold py-3.5 px-6 rounded-xl transition-all duration-300 hover:scale-[1.02] shadow-lg shadow-blue-500/20">
+              Get Started
+            </a>
+          </div>
+        </div>
+
+<div class="bg-white rounded-2xl border border-gray-200/80 p-8 lg:p-10 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-between min-h-[550px] lg:scale-95 hover:scale-[0.98] group">
+          <div class="space-y-6">
+            <h3 class="text-xl font-bold text-gray-800">Organization</h3>
+            <div class="space-y-2">
+              <span class="text-4xl lg:text-5xl font-extrabold text-gray-900">$49.99</span>
+              <p class="text-sm text-gray-500">Collaborate with your entire team</p>
+            </div>
+            
+            <ul class="space-y-4 pt-6 border-t border-gray-100 text-gray-700">
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandBlue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">Sync unlimited devices</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandBlue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">100 GB monthly uploads</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandBlue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">1 GB max. note size</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandBlue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">Team workspace & collaboration</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-brandBlue flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm">Advanced permissions & support</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="pt-8">
+            <a href="#" class="block text-center border-2 border-brandBlue text-brandDarkNavy font-bold py-3.5 px-6 rounded-xl hover:bg-brandBlue hover:text-white transition-all duration-300 hover:scale-[1.02]">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="bg-brandDark text-white py-24 relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <svg class="w-full h-full text-blue-200" viewBox="0 0 1440 300" fill="none">
+        <path d="M0 100 C 300 200, 600 50, 900 150 C 1200 250, 1300 100, 1440 120" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        <path d="M0 150 C 400 300, 700 100, 1100 200 C 1300 250, 1400 150, 1440 180" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-8 relative z-10">
+      <h2 class="text-4xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+        Your work, everywhere <span class="relative inline-block">
+          you are
+          <svg class="absolute -bottom-2 left-0 w-full h-3 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <path d="M3 7 C 30 7, 70 2, 97 5" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+          </svg>
+        </span>
+      </h2>
+      <p class="text-blue-100/80 text-lg lg:text-xl font-light leading-relaxed max-w-2xl mx-auto">
+        Access your notes from your computer, phone or tablet by synchronising with iCloud, Google Drive, OneDrive and Dropbox. Work offline too.
+      </p>
+      <div class="pt-4">
+        <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-xl hover:gap-4 group">
+          Try Whitespace free
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<section class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      
+      <div class="space-y-6 lg:max-w-xl">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-brandDarkNavy tracking-tight">
+          100% <span class="relative inline-block">
+            your data
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 5 C 30 5, 70 2, 97 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          The app is open source and your data is always yours. No lock-in, no ads, no trackers. Export your notes in Markdown, HTML, PDF or JSON.
+        </p>
+        <div class="pt-4">
+          <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20 group">
+            Read More
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+
+<div class="relative w-full aspect-[4/3] max-w-[450px] mx-auto flex items-center justify-center">
+        
+        <svg class="w-full h-full text-brandBlue" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+          
+          <path d="M40 75 C 60 40, 140 40, 160 75" stroke="#FFE492" stroke-width="2" stroke-dasharray="4 4"/>
+          <path d="M40 75 C 60 110, 140 110, 160 75" stroke="#4F9CF9" stroke-width="2"/>
+          <path d="M100 20 L 100 75" stroke="#A7CEFC" stroke-width="1.5"/>
+          <path d="M40 75 L 100 75" stroke="#A7CEFC" stroke-width="1.5"/>
+          <path d="M160 75 L 100 75" stroke="#A7CEFC" stroke-width="1.5"/>
+
+<circle cx="100" cy="20" r="12" fill="#FFE492" stroke="white" stroke-width="2"/>
+          <path d="M97 17 L 103 17 M97 20 L 103 20 M97 23 L 103 23" stroke="#043873" stroke-width="1.5" stroke-linecap="round"/>
+
+<circle cx="40" cy="75" r="14" fill="#4F9CF9" stroke="white" stroke-width="2"/>
+          <path d="M36 75 L 39 78 L 45 72" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+<circle cx="100" cy="75" r="18" fill="white" stroke="#043873" stroke-width="2" filter="drop-shadow(0px 4px 6px rgba(0,0,0,0.15))"/>
+          
+          <path d="M96 74 V 71 A 4 4 0 0 1 104 71 V 74 M94 74 H 106 V 82 H 94 Z" stroke="#043873" stroke-width="1.5" fill="none"/>
+
+<circle cx="160" cy="75" r="12" fill="#A7CEFC" stroke="white" stroke-width="2"/>
+          <path d="M157 75 H 163 M160 72 V 78" stroke="#043873" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+<section class="py-20 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-brandDarkNavy tracking-tight">
+          Our <span class="relative inline-block">
+            sponsors
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 5 C 30 5, 70 2, 97 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-12 lg:gap-24 opacity-60 hover:opacity-90 transition-opacity duration-300">
+        
+        <div class="flex items-center gap-3">
+          <svg class="w-10 h-10 text-black fill-current" viewBox="0 0 24 24">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-.96.04-2.13.64-2.82 1.45-.6.69-1.12 1.84-.98 2.94 1.07.08 2.15-.52 2.81-1.33z"/>
+          </svg>
+          <span class="font-bold text-xl text-black">Apple</span>
+        </div>
+
+<div class="flex items-center gap-3">
+          <svg class="w-9 h-9" viewBox="0 0 23 23">
+            <rect x="0" y="0" width="10.5" height="10.5" fill="#f25022"/>
+            <rect x="11.5" y="0" width="10.5" height="10.5" fill="#7fba00"/>
+            <rect x="0" y="11.5" width="10.5" height="10.5" fill="#00a4ef"/>
+            <rect x="11.5" y="11.5" width="10.5" height="10.5" fill="#ffb900"/>
+          </svg>
+          <span class="font-bold text-xl text-gray-700">Microsoft</span>
+        </div>
+
+<div class="flex items-center gap-3">
+          <svg class="w-10 h-10" viewBox="0 0 512 512">
+            <rect width="512" height="512" rx="15%" fill="#fff" />
+            <path d="M119.2 321.7c0-15.6 12.7-28.3 28.3-28.3h28.3v28.3c0 15.6-12.7 28.3-28.3 28.3h-28.3v-28.3zm42.4-70.7h-42.4c-15.6 0-28.3-12.7-28.3-28.3s12.7-28.3 28.3-28.3h42.4v56.6zm0 14.1v56.6h-28.3c-23.4 0-42.4-19-42.4-42.4v-42.4h56.6c7.8 0 14.1 6.3 14.1 14.1v14.1zm176.8-84.9c0 15.6-12.7 28.3-28.3 28.3h-28.3v-28.3c0-15.6 12.7-28.3 28.3-28.3h28.3v28.3zm-70.7-42.4v42.4c0 15.6-12.7 28.3-28.3 28.3s-28.3-12.7-28.3-28.3v-42.4h56.6zm14.1 0h42.4c23.4 0 42.4 19 42.4 42.4v42.4H368c-7.8 0-14.1-6.3-14.1-14.1v-56.6c.1-7.7-6.2-14.1-14.1-14.1zm-191 0c0-15.6 12.7-28.3 28.3-28.3h28.3v28.3c0 15.6-12.7 28.3-28.3 28.3h-28.3v-28.3zm42.4 70.7h42.4c15.6 0 28.3 12.7 28.3 28.3s-12.7 28.3-28.3 28.3h-42.4v-56.6zm0-14.1V176.8h28.3c23.4 0 42.4 19 42.4 42.4v42.4H191c-7.8 0-14.1-6.3-14.1-14.1v-14.1zm176.8 84.9c0-15.6 12.7-28.3 28.3-28.3h28.3v28.3c0 15.6-12.7 28.3-28.3 28.3h-28.3v-28.3zm-70.7 42.4v-42.4c0-15.6 12.7-28.3 28.3-28.3s28.3 12.7 28.3 28.3v42.4h-56.6zm-14.1 0h-42.4c-23.4 0-42.4-19-42.4-42.4v-42.4H321c7.8 0 14.1 6.3 14.1 14.1v56.6c0 7.8-6.3 14.1-14.1 14.1z" fill="#e01e5a"/>
+            <path d="M147.5 176.8c0 15.6-12.7 28.3-28.3 28.3h-28.3v-28.3c0-15.6 12.7-28.3 28.3-28.3h28.3v28.3zm0 70.7v56.6c0 23.4-19 42.4-42.4 42.4h-42.4V321h56.6c7.8 0 14.1-6.3 14.1-14.1v-59.4zm176.8 84.9c-15.6 0-28.3-12.7-28.3-28.3v-28.3h28.3c15.6 0 28.3 12.7 28.3 28.3v28.3h-28.3zm-70.7 42.4h-42.4c-23.4 0-42.4-19-42.4-42.4v-42.4h56.6c7.8 0 14.1 6.3 14.1 14.1v56.6c0 7.8-6.3 14.1-14.1 14.1zm-84.9-176.8c15.6 0 28.3 12.7 28.3 28.3v28.3h-28.3c-15.6 0-28.3-12.7-28.3-28.3v-28.3h28.3zm-42.4-70.7h42.4c23.4 0 42.4 19 42.4 42.4v42.4h-56.6c-7.8 0-14.1-6.3-14.1-14.1v-56.6c0-7.8 6.3-14.1 14.1-14.1zm176.8 84.9v-56.6c0-23.4-19-42.4-42.4-42.4H321v56.6h56.6c7.8 0 14.1 6.3 14.1 14.1v28.3z" fill="#36c5f0"/>
+            <path d="M392.8 176.8c15.6 0 28.3 12.7 28.3 28.3v28.3H393c-15.6 0-28.3-12.7-28.3-28.3v-28.3h28.1zm-70.7-70.7v56.6h-28.3c-23.4 0-42.4-19-42.4-42.4v-42.4h56.6c7.8 0 14.1 6.3 14.1 14.1v14.1z" fill="#2eb67d"/>
+            <path d="M321 321h-56.6v-28.3c0-15.6 12.7-28.3 28.3-28.3h28.3V321zm71.8-144.2h-42.4c-15.6 0-28.3-12.7-28.3-28.3s12.7-28.3 28.3-28.3h42.4v56.6z" fill="#ecb22e"/>
+          </svg>
+          <span class="font-bold text-xl text-gray-800">slack</span>
+        </div>
+
+<div class="flex items-center gap-2">
+          <svg class="w-10 h-10" viewBox="0 0 24 24">
+            <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.114-5.136 4.114-3.41 0-6.19-2.78-6.19-6.19 0-3.41 2.78-6.19 6.19-6.19 1.547 0 2.946.57 4.025 1.503l3.056-3.055C19.146 2.052 15.932 1 12.24 1 5.92 1 1 5.92 1 12.24s4.92 11.24 11.24 11.24c5.89 0 10.99-4.22 10.99-11.24 0-.668-.076-1.327-.19-1.955H12.24z" fill="#4285F4"/>
+          </svg>
+          <span class="font-bold text-xl text-gray-600">Google</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="py-20 lg:py-32 bg-brandDark text-white relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <svg class="w-full h-full text-blue-200" viewBox="0 0 1000 1000" fill="none">
+        <path d="M100 100C300 200 400 50 600 300C800 550 900 200 1000 400" stroke="currentColor" stroke-width="2" stroke-dasharray="10 10"/>
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+      
+      <div class="relative w-full aspect-square max-w-[450px] mx-auto flex items-center justify-center">
+        
+        <svg class="w-full h-full" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          
+          <line x1="150" y1="150" x2="80" y2="70" stroke="#FFE492" stroke-width="2"/>
+          <line x1="150" y1="150" x2="220" y2="70" stroke="#4F9CF9" stroke-width="2"/>
+          <line x1="150" y1="150" x2="50" y2="150" stroke="#A7CEFC" stroke-width="2" stroke-dasharray="4 4"/>
+          <line x1="150" y1="150" x2="250" y2="150" stroke="#A7CEFC" stroke-width="2" stroke-dasharray="4 4"/>
+          <line x1="150" y1="150" x2="90" y2="230" stroke="#4F9CF9" stroke-width="2"/>
+          <line x1="150" y1="150" x2="210" y2="230" stroke="#FFE492" stroke-width="2"/>
+
+<circle cx="150" cy="150" r="28" fill="white" stroke="#4F9CF9" stroke-width="3" filter="drop-shadow(0 10px 15px rgba(0,0,0,0.3))"/>
+          
+          <g transform="translate(136, 136) scale(0.28)">
+            <path d="M 30 30 H 42 Q 46 30, 45 33 L 29 49 Q 26 50, 26 46 V 34 Q 26 30, 30 30 Z" fill="#043873" />
+            <path d="M 70 30 H 58 Q 54 30, 55 33 L 71 49 Q 74 50, 74 46 V 34 Q 74 30, 70 30 Z" fill="#043873" />
+            <path d="M 47 37 Q 50 34, 53 37 L 72 56 Q 74 58, 74 61 V 69 Q 74 72, 71 72 L 53 51 Q 50 48, 47 51 L 29 72 Q 26 72, 26 69 V 61 Q 26 58, 28 56 Z" fill="#043873" />
+          </g>
+
+<circle cx="80" cy="70" r="16" fill="white" stroke="#EA4335" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.15))"/>
+          
+          <path d="M74 65 H 86 V 75 H 74 Z" stroke="#EA4335" stroke-width="1.5" fill="none"/>
+          <path d="M74 65 L 80 70 L 86 65" stroke="#EA4335" stroke-width="1.5"/>
+
+<circle cx="220" cy="70" r="16" fill="white" stroke="#4285F4" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.15))"/>
+          <circle cx="220" cy="70" r="6" stroke="#4285F4" stroke-width="1.5"/>
+          <circle cx="220" cy="70" r="2" fill="#4285F4"/>
+
+<circle cx="50" cy="150" r="16" fill="white" stroke="#34A853" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.15))"/>
+          <path d="M46 156 L 50 144 H 56 L 50 156 Z" fill="#34A853"/>
+
+<circle cx="250" cy="150" r="16" fill="white" stroke="#E01E5A" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.15))"/>
+          <path d="M246 146 H 254 V 154 H 246 Z" stroke="#E01E5A" stroke-width="1.5" stroke-linecap="round"/>
+
+<circle cx="90" cy="230" r="16" fill="white" stroke="#0079BF" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.15))"/>
+          <rect x="85" y="224" width="10" height="12" rx="1.5" fill="#0079BF"/>
+          <rect x="87" y="226" width="2" height="6" fill="white"/>
+          <rect x="91" y="226" width="2" height="4" fill="white"/>
+
+<circle cx="210" cy="230" r="16" fill="white" stroke="#0078D4" stroke-width="2" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.15))"/>
+          <path d="M206 226 H 214 V 234 H 206 Z" stroke="#0078D4" stroke-width="1.5" fill="none"/>
+          <path d="M206 226 L 210 230 L 214 226" stroke="#0078D4" stroke-width="1.5"/>
+        </svg>
+      </div>
+
+<div class="space-y-6 lg:max-w-xl">
+        <h2 class="text-4xl lg:text-5xl font-extrabold tracking-tight">
+          Work with Your Favorite Apps Using <span class="relative inline-block">
+            whitespace
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 5 C 30 5, 70 2, 97 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+        <p class="text-blue-100/80 text-lg leading-relaxed">
+          Whitespace integrates with your favorite personal and team collaboration apps. Seamlessly sync and access your data from one simple dashboard.
+        </p>
+        <div class="pt-4">
+          <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-xl group">
+            Read More
+            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="py-20 lg:py-32 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-brandDarkNavy tracking-tight">
+          What Our Clients <span class="relative inline-block">
+            Says
+            <svg class="absolute -bottom-2 left-0 w-full h-2 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+              <path d="M3 5 C 30 5, 70 2, 97 4" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+            </svg>
+          </span>
+        </h2>
+      </div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        
+        <div class="bg-white rounded-2xl border border-gray-100 p-8 lg:p-10 shadow-lg flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+          <div class="space-y-6">
+            
+            <svg class="w-12 h-12 text-brandBlue" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-gray-600 text-base leading-relaxed">
+              "Whitespace is designed as a collaboration tool for businesses that is a useful addition to any workplace. The interface is clean, navigation is extremely fast, and the task board helps my team stay completely aligned."
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-4 pt-8 mt-8 border-t border-gray-100">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-brandBlue/35 bg-gray-100 flex-shrink-0">
+              
+              <svg class="w-full h-full text-gray-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800 text-sm">Oberon Shaw, M.C.</h4>
+              <p class="text-xs text-brandTextGray mt-0.5">Head of Design, Avana</p>
+            </div>
+          </div>
+        </div>
+
+<div class="bg-brandBlue text-white rounded-2xl p-8 lg:p-10 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
+          <div class="space-y-6">
+            
+            <svg class="w-12 h-12 text-white/80" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-blue-50 text-base leading-relaxed">
+              "We have been using whitespace to organize our sprints and document specifications. It's incredibly straightforward and integrates perfectly with our existing code repositories and communication spaces."
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-4 pt-8 mt-8 border-t border-white/20">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-white/30 bg-white/20 flex-shrink-0">
+              <svg class="w-full h-full text-white/60" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Jason West</h4>
+              <p class="text-xs text-blue-200 mt-0.5">Product Lead, Nexa</p>
+            </div>
+          </div>
+        </div>
+
+<div class="bg-brandBlue text-white rounded-2xl p-8 lg:p-10 shadow-xl flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group">
+          <div class="space-y-6">
+            
+            <svg class="w-12 h-12 text-white/80" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
+            <p class="text-blue-50 text-base leading-relaxed">
+              "Choosing whitespace was one of the best decisions our team made. The export functions (Markdown and PDF) are completely flawless, ensuring that we maintain true ownership and ease of transport for all our corporate assets."
+            </p>
+          </div>
+          
+          <div class="flex items-center gap-4 pt-8 mt-8 border-t border-white/20">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-white/30 bg-white/20 flex-shrink-0">
+              <svg class="w-full h-full text-white/60" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div>
+              <h4 class="font-bold text-white text-sm">Aileen K.</h4>
+              <p class="text-xs text-blue-200 mt-0.5">Director of Ops, Cloudscale</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="bg-brandDark text-white py-24 text-center relative overflow-hidden">
+    
+    <div class="absolute inset-0 opacity-15 pointer-events-none">
+      <svg class="absolute right-0 bottom-0 w-[50%] h-full text-blue-300" viewBox="0 0 400 400" fill="none">
+        <path d="M100 300C250 200 300 400 400 200" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 space-y-6 relative z-10">
+      <h2 class="text-4xl lg:text-6xl font-extrabold leading-tight">
+        Try Whitespace <span class="relative inline-block">
+          today
+          <svg class="absolute -bottom-2 left-0 w-full h-3 text-brandYellow" viewBox="0 0 100 10" preserveAspectRatio="none">
+            <path d="M3 7 C 30 7, 70 2, 97 5" stroke="currentColor" stroke-width="4" stroke-linecap="round" fill="none" />
+          </svg>
+        </span>
+      </h2>
+      <p class="text-blue-100/80 text-lg lg:text-xl font-light">
+        Get started for free. Customize your plans as you grow.
+      </p>
+      
+      <div class="pt-4">
+        <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-3 transition-all hover:scale-105 active:scale-95 shadow-xl group">
+          Try Whitespace free
+          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+
+      <p class="text-sm text-blue-200/60 pt-4">On a mobile, tablet or desktop</p>
+
+<div class="flex items-center justify-center gap-8 pt-4 text-blue-200/80">
+        
+        <svg class="w-8 h-8 hover:text-white transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-.96.04-2.13.64-2.82 1.45-.6.69-1.12 1.84-.98 2.94 1.07.08 2.15-.52 2.81-1.33z"/>
+        </svg>
+        
+        <svg class="w-8 h-8 hover:text-white transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M0 3.449L9.75 2.1v9.45H0V3.449zM0 12.45h9.75v9.45L0 20.551v-8.101zM10.8 1.95L24 0v11.55H10.8V1.95zM10.8 12.45H24v11.55l-13.2-1.95v-9.6z"/>
+        </svg>
+        
+        <svg class="w-8 h-8 hover:text-white transition-colors cursor-pointer" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.523 15.3414c-.551 0-1-.449-1-1s.449-1 1-1 1 .449 1 1-.449 1-1 1zm-11.046 0c-.551 0-1-.449-1-1s.449-1 1-1 1 .449 1 1-.449 1-1 1zm11.455-5.698l1.88-3.256c.105-.183.042-.416-.14-.521-.183-.104-.417-.041-.521.142l-1.91 3.308c-1.637-.748-3.468-1.171-5.4-1.171s-3.763.423-5.4 1.171l-1.91-3.308c-.104-.183-.338-.246-.521-.142-.182.105-.245.338-.14.521l1.88 3.256C2.261 11.2374.396 14.1534 0 17.5854h24c-.396-3.432-2.261-6.348-5.068-7.942z"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+<footer class="bg-brandDark text-white pt-20 pb-8 border-t border-blue-900/60 relative overflow-hidden">
+    
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 pb-16">
+      
+      <div class="space-y-4 md:col-span-2 lg:col-span-1">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-8 h-8 flex items-center justify-center bg-brandBlue rounded-lg">
+            <svg class="w-5 h-5 text-white" viewBox="0 0 100 100" fill="none">
+              <path d="M 30 30 H 42 Q 46 30, 45 33 L 29 49 Q 26 50, 26 46 V 34 Q 26 30, 30 30 Z" fill="currentColor" />
+              <path d="M 70 30 H 58 Q 54 30, 55 33 L 71 49 Q 74 50, 74 46 V 34 Q 74 30, 70 30 Z" fill="currentColor" />
+              <path d="M 47 37 Q 50 34, 53 37 L 72 56 Q 74 58, 74 61 V 69 Q 74 72, 71 72 L 53 51 Q 50 48, 47 51 L 29 72 Q 26 72, 26 69 V 61 Q 26 58, 28 56 Z" fill="currentColor" />
+            </svg>
+          </div>
+          <span class="text-2xl font-black tracking-tight">whitespace</span>
+        </a>
+        <p class="text-blue-100/70 text-sm leading-relaxed max-w-xs">
+          whitespace was created to help digital creators, developers and modern teams organize ideas and sync tasks seamlessly.
+        </p>
+      </div>
+
+<div class="space-y-4">
+        <h4 class="font-bold text-base tracking-wider uppercase text-blue-200">Product</h4>
+        <ul class="space-y-2.5 text-sm text-blue-100/80">
+          <li><a href="#" class="hover:text-brandYellow transition-colors">Overview</a></li>
+          <li><a href="#" class="hover:text-brandYellow transition-colors">Pricing</a></li>
+          <li><a href="#" class="hover:text-brandYellow transition-colors">Customer stories</a></li>
+        </ul>
+      </div>
+
+<div class="space-y-4">
+        <h4 class="font-bold text-base tracking-wider uppercase text-blue-200">Resources</h4>
+        <ul class="space-y-2.5 text-sm text-blue-100/80">
+          <li><a href="#" class="hover:text-brandYellow transition-colors">Blog</a></li>
+          <li><a href="#" class="hover:text-brandYellow transition-colors">Guides & tutorials</a></li>
+          <li><a href="#" class="hover:text-brandYellow transition-colors">Help center</a></li>
+        </ul>
+      </div>
+
+<div class="space-y-4">
+        <h4 class="font-bold text-base tracking-wider uppercase text-blue-200">Company</h4>
+        <ul class="space-y-2.5 text-sm text-blue-100/80">
+          <li><a href="#" class="hover:text-brandYellow transition-colors">About us</a></li>
+          <li><a href="#" class="hover:text-brandYellow transition-colors">Careers</a></li>
+          <li><a href="#" class="hover:text-brandYellow transition-colors">Media kit</a></li>
+        </ul>
+      </div>
+
+<div class="space-y-4 md:col-span-2 lg:col-span-1">
+        <h4 class="font-bold text-base tracking-wider uppercase text-blue-200">Try It Today</h4>
+        <p class="text-sm text-blue-100/70 leading-relaxed">
+          Start writing notes and planning workflows for free.
+        </p>
+        <div>
+          <a href="#" class="bg-brandBlue hover:bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold inline-flex items-center gap-2 transition-all hover:gap-3 shadow-md">
+            Start for free
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+<div class="max-w-7xl mx-auto px-6 pt-8 border-t border-blue-900/60 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex flex-col md:flex-row items-center gap-6 text-sm text-blue-100/60">
+        
+        <div class="relative group cursor-pointer text-blue-100/80 hover:text-white flex items-center gap-1.5 font-medium">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+          <span>English</span>
+          <svg class="w-3.5 h-3.5 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+        </div>
+        
+        <a href="#" class="hover:text-white transition-colors">Terms & privacy</a>
+        <a href="#" class="hover:text-white transition-colors">Security</a>
+        <a href="#" class="hover:text-white transition-colors">Status</a>
+        
+        <span>&copy; 2026 whitespace LLC.</span>
+      </div>
+
+<div class="flex items-center gap-6 text-blue-100/60">
+        
+        <a href="#" class="hover:text-white transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+        </a>
+        
+        <a href="#" class="hover:text-white transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+        </a>
+        
+        <a href="#" class="hover:text-white transition-colors">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
