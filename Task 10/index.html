@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Personal portfolio of Muhammad Wasi Faiz, Software Engineering student at COMSATS University Islamabad. Showcasing frontend web development projects, technical skills, and education.">
+  <meta name="keywords"
+    content="Muhammad Wasi Faiz, Software Engineer, Portfolio, Frontend Developer, JavaScript, Tailwind CSS, COMSATS, Sahiwal">
+  <meta name="author" content="Muhammad Wasi Faiz">
+  <title>Muhammad Wasi Faiz</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons via CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind Output Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JS Error Boundary Handler -->
+  <script>
+    window.addEventListener('error', function (e) {
+      var d = document.createElement('div');
+      d.id = 'js-error-banner';
+      d.style.position = 'fixed';
+      d.style.bottom = '0';
+      d.style.left = '0';
+      d.style.right = '0';
+      d.style.background = '#ef4444';
+      d.style.color = 'white';
+      d.style.padding = '12px';
+      d.style.zIndex = '9999';
+      d.style.fontSize = '14px';
+      d.style.fontFamily = 'monospace';
+      d.style.textAlign = 'center';
+      d.textContent = 'Runtime JS Error: ' + e.message + ' at ' + e.filename + ':' + e.lineno;
+      document.body.appendChild(d);
+    });
+  </script>
+</head>
+
+<body
+  class="bg-[#0b1120] text-slate-100 font-sans antialiased overflow-x-hidden relative selection:bg-cyan-500 selection:text-[#0b1120]">
+
+  <!-- Glowing background blobs for ambient aesthetic -->
+  <div class="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+  <div
+    class="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[150px] pointer-events-none">
+  </div>
+  <div class="absolute bottom-1/4 left-10 w-96 h-96 bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none">
+  </div>
+  <div class="absolute bottom-10 right-10 w-80 h-80 bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+  <!-- Header & Navigation -->
+  <header id="portfolioHeader"
+    class="sticky top-0 z-50 transition-all duration-300 w-full border-b border-transparent backdrop-blur-md bg-transparent">
+    <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2 group font-outfit select-none">
+        <span
+          class="text-2xl font-black bg-gradient-to-r from-indigo-400 via-cyan-400 to-indigo-500 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">MWF</span>
+        <div class="hidden sm:flex flex-col border-l border-slate-800 pl-2 ml-1 leading-none text-left">
+          <span class="text-xs font-bold text-slate-200 tracking-wider">Muhammad Wasi Faiz</span>
+          <span class="text-[9px] font-medium text-cyan-400/80 tracking-wide uppercase">Software Engineering
+            student</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300 tracking-wide font-outfit">
+        <a href="#home" id="navLinkHome" class="hover:text-cyan-400 transition-colors duration-200 py-2">Home</a>
+        <a href="#about" id="navLinkAbout" class="hover:text-cyan-400 transition-colors duration-200 py-2">About</a>
+        <a href="#skills" id="navLinkSkills" class="hover:text-cyan-400 transition-colors duration-200 py-2">Skills</a>
+        <a href="#projects" id="navLinkProjects"
+          class="hover:text-cyan-400 transition-colors duration-200 py-2">Projects</a>
+        <a href="#experience" id="navLinkExperience"
+          class="hover:text-cyan-400 transition-colors duration-200 py-2">Education</a>
+        <a href="#contact" id="navLinkContact"
+          class="hover:text-cyan-400 transition-colors duration-200 py-2">Contact</a>
+      </div>
+
+      <!-- Resume Download CTA / Action button -->
+      <div class="hidden md:block">
+        <a href="#contact"
+          class="px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-cyan-500/30 text-cyan-400 bg-cyan-950/20 hover:bg-cyan-500 hover:text-[#0b1120] hover:border-cyan-500 transition-all duration-300 shadow-lg shadow-cyan-950/30">Get
+          in Touch</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="navMenuBtn"
+        class="md:hidden p-2 text-slate-300 hover:text-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/20 rounded-md transition-colors"
+        aria-label="Toggle Navigation Menu">
+        <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenuDrawer"
+      class="md:hidden hidden bg-[#0b1120]/95 backdrop-blur-lg border-b border-slate-800 w-full overflow-hidden transition-all duration-300 max-h-0">
+      <div class="px-6 py-6 flex flex-col gap-4 font-outfit text-base text-slate-300">
+        <a href="#home"
+          class="mobile-nav-link hover:text-cyan-400 transition-colors duration-200 py-2 border-b border-slate-800/40">Home</a>
+        <a href="#about"
+          class="mobile-nav-link hover:text-cyan-400 transition-colors duration-200 py-2 border-b border-slate-800/40">About
+          Me</a>
+        <a href="#skills"
+          class="mobile-nav-link hover:text-cyan-400 transition-colors duration-200 py-2 border-b border-slate-800/40">Skills</a>
+        <a href="#projects"
+          class="mobile-nav-link hover:text-cyan-400 transition-colors duration-200 py-2 border-b border-slate-800/40">Projects</a>
+        <a href="#experience"
+          class="mobile-nav-link hover:text-cyan-400 transition-colors duration-200 py-2 border-b border-slate-800/40">Education</a>
+        <a href="#contact" class="mobile-nav-link hover:text-cyan-400 transition-colors duration-200 py-2">Contact</a>
+        <a href="#contact"
+          class="mobile-nav-link block text-center px-4 py-3 mt-2 rounded-lg text-sm font-semibold tracking-wider bg-gradient-to-r from-indigo-500 to-cyan-500 text-white hover:brightness-110 transition-all shadow-md">Get
+          in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 relative z-10">
+
+    <!-- Hero / Home Section -->
+    <section id="home" class="min-h-[calc(100vh-80px)] flex flex-col justify-center py-12 md:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Text Column -->
+        <div class="lg:col-span-7 flex flex-col items-start text-left space-y-6">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-indigo-500/20 bg-indigo-500/5 text-xs font-semibold text-indigo-300">
+            <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+            Software Engineering Student
+          </div>
+
+          <div class="space-y-2">
+            <span class="text-sm md:text-base font-medium text-cyan-400 font-mono tracking-wider">Hello, I am</span>
+            <h1
+              class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black font-outfit tracking-tight leading-tight text-white">
+              Muhammad <span
+                class="bg-gradient-to-r from-cyan-400 via-indigo-400 to-cyan-400 bg-300% animate-gradient-shift bg-clip-text text-transparent">Wasi
+                Faiz</span>
+            </h1>
+          </div>
+
+          <h2
+            class="text-xl sm:text-2xl font-semibold text-slate-300 flex flex-wrap gap-2 items-center font-outfit h-12">
+            <span>I specialize in</span>
+            <span id="typewriterText" class="text-cyan-400 border-r-2 border-cyan-400 pr-1 animate-caret"></span>
+          </h2>
+
+          <p class="text-slate-400 max-w-xl text-base md:text-lg font-light leading-relaxed">
+            A software engineering student at COMSATS University Islamabad, Sahiwal Campus. Experienced in building
+            responsive, modern web applications, integrating APIs, and exploring computer science fundamentals.
+          </p>
+
+          <!-- Actions & Links -->
+          <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <a href="#projects"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-indigo-500 to-cyan-500 text-[#0b1120] font-bold rounded-xl hover:shadow-lg hover:shadow-cyan-500/20 hover:brightness-110 hover:-translate-y-0.5 transition-all duration-300 text-sm tracking-wide">
+              View My Work
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path>
+              </svg>
+            </a>
+            <a href="#contact"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-slate-700 bg-slate-800/30 hover:bg-slate-800/60 hover:border-slate-600 rounded-xl text-sm font-semibold text-slate-200 transition-all duration-300">
+              Get in Touch
+            </a>
+          </div>
+
+          <!-- Quick Socials -->
+          <div class="flex items-center gap-4 pt-4 text-slate-400">
+            <span class="text-xs font-semibold uppercase tracking-widest text-slate-500 font-mono">Connect:</span>
+            <a href="https://github.com/muhammad-wasi-faiz" target="_blank" rel="noopener noreferrer"
+              class="hover:text-cyan-400 text-xl transition-colors duration-200" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-wasi-faiz-9b963a310/" target="_blank"
+              rel="noopener noreferrer" class="hover:text-indigo-400 text-xl transition-colors duration-200"
+              aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:m.wasifaizklasson92@gmail.com"
+              class="hover:text-cyan-400 text-xl transition-colors duration-200" aria-label="Email Address">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Graphic / Code Mockup Column -->
+        <div class="lg:col-span-5 flex justify-center items-center">
+          <div class="w-full max-w-md relative group">
+            <div
+              class="absolute -inset-1.5 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-2xl blur opacity-30 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
+            </div>
+            <!-- Code window -->
+            <div
+              class="relative bg-slate-950/80 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-md">
+              <div class="flex items-center justify-between px-4 py-3 bg-slate-900/80 border-b border-slate-800/80">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                </div>
+                <div class="text-[11px] font-mono text-slate-500">developer.js</div>
+                <div class="w-10"></div>
+              </div>
+              <div class="p-6 font-mono text-xs md:text-sm leading-relaxed text-slate-300">
+                <p><span class="text-pink-500">const</span> <span class="text-blue-400">developer</span> = {</p>
+                <p class="pl-4"><span class="text-slate-400">name:</span> <span class="text-green-400">'Muhammad Wasi
+                    Faiz'</span>,</p>
+                <p class="pl-4"><span class="text-slate-400">role:</span> <span class="text-green-400">'Software
+                    Engineering Student'</span>,</p>
+                <p class="pl-4"><span class="text-slate-400">location:</span> <span class="text-green-400">'Sahiwal,
+                    Pakistan'</span>,</p>
+                <p class="pl-4"><span class="text-slate-400">cgpa:</span> <span class="text-amber-400">3.38</span>,</p>
+                <p class="pl-4"><span class="text-slate-400">skills:</span> [</p>
+                <p class="pl-8"><span class="text-green-400">'JavaScript'</span>, <span class="text-green-400">'Tailwind
+                    CSS'</span>,</p>
+                <p class="pl-8"><span class="text-green-400">'C++'</span>, <span class="text-green-400">'Git &
+                    GitHub'</span>,</p>
+                <p class="pl-8"><span class="text-green-400">'React.js'</span>, <span
+                    class="text-green-400">'CS50'</span></p>
+                <p class="pl-4">],</p>
+                <p class="pl-4"><span class="text-slate-400">status:</span> <span class="text-green-400">'Learning &
+                    Creating'</span>,</p>
+                <p class="pl-4"><span class="text-blue-400">code:</span> () => {</p>
+                <p class="pl-8"><span class="text-pink-500">while</span> (<span class="text-blue-400">learning</span>) {
+                </p>
+                <p class="pl-12"><span class="text-blue-400">createAwesomeProjects</span>();</p>
+                <p class="pl-8">}</p>
+                <p class="pl-4">}</p>
+                <p>};</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 border-t border-slate-800/40 scroll-mt-20">
+      <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400 font-mono">About Me</span>
+        <div class="h-1 w-16 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+        <!-- Quick Highlights Card -->
+        <div
+          class="lg:col-span-5 flex flex-col justify-between p-8 bg-slate-900/40 border border-slate-800/60 rounded-2xl backdrop-blur-sm relative">
+          <div class="space-y-6">
+            <h3 class="text-xl font-bold font-outfit text-white">Academic Profile</h3>
+            <div class="space-y-4">
+              <!-- CUI Info -->
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center shrink-0 text-indigo-400">
+                  <i class="fas fa-university"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-slate-200">COMSATS University Islamabad</h4>
+                  <p class="text-xs text-slate-400">Sahiwal Campus</p>
+                  <p class="text-xs text-cyan-400 font-medium mt-0.5">2023 - 2027</p>
+                </div>
+              </div>
+
+              <!-- Degree -->
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center shrink-0 text-cyan-400">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-slate-200">BS Software Engineering</h4>
+                  <p class="text-xs text-slate-400">Academic CGPA</p>
+                  <p class="text-xs text-cyan-400 font-bold mt-0.5">CGPA: 3.23</p>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="flex gap-4 items-start">
+                <div
+                  class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center shrink-0 text-slate-400">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-slate-200">Sahiwal, Pakistan</h4>
+                  <p class="text-xs text-slate-400">Location</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills badging in About card -->
+          <div class="mt-8 pt-6 border-t border-slate-800/80">
+            <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 font-mono mb-3">Soft Skills</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-300 font-medium">Problem
+                Solving</span>
+              <span class="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-300 font-medium">Team
+                Collaboration</span>
+              <span class="px-3 py-1 rounded-full text-xs bg-slate-800 text-slate-300 font-medium">Quick Learner</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text/Narrative Column -->
+        <div class="lg:col-span-7 flex flex-col justify-center space-y-6">
+          <h3 class="text-2xl font-bold font-outfit text-white">Aspiring Software Engineer & Web Developer</h3>
+          <p class="text-slate-300 font-light leading-relaxed">
+            I am a student of Bachelor of Science in Software Engineering at COMSATS University Islamabad, Sahiwal
+            Campus. With a strong interest in frontend web development and software architecture, I build clean,
+            user-friendly, and responsive web applications using CSS, JavaScript, and Tailwind CSS.
+          </p>
+          <p class="text-slate-300 font-light leading-relaxed">
+            Currently, I am expanding my development skills by exploring React.js and modern frontend tools. In
+            parallel, I am building my core computer science understanding (algorithms, data structures, and system
+            design) through Harvard's CS50 course.
+          </p>
+
+          <!-- Achievements grid -->
+          <div class="grid grid-cols-2 gap-4 pt-4">
+            <div class="p-4 bg-slate-900/20 border border-slate-800/50 rounded-xl">
+              <span
+                class="text-3xl font-extrabold font-outfit bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">3.23</span>
+              <span class="block text-xs font-semibold text-slate-400 mt-1 uppercase tracking-wider font-mono">Academic
+                CGPA</span>
+            </div>
+            <div class="p-4 bg-slate-900/20 border border-slate-800/50 rounded-xl">
+              <span
+                class="text-3xl font-extrabold font-outfit bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">4+</span>
+              <span
+                class="block text-xs font-semibold text-slate-400 mt-1 uppercase tracking-wider font-mono">Interactive
+                Web Projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 border-t border-slate-800/40 scroll-mt-20">
+      <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400 font-mono">Skills</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-outfit text-white">Technical Toolkit</h2>
+        <div class="h-1 w-16 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Languages & Concepts Card -->
+        <div
+          class="p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl backdrop-blur-sm flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+                <i class="fas fa-code"></i>
+              </div>
+              <h3 class="text-lg font-bold font-outfit text-white">Languages</h3>
+            </div>
+            <div class="space-y-4">
+              <!-- C++ -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs font-semibold">
+                  <span class="text-slate-300 font-mono">C++</span>
+                  <span class="text-indigo-400 font-outfit">Competent</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-indigo-500 h-2 rounded-full w-[80%]"></div>
+                </div>
+              </div>
+              <!-- JavaScript -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs font-semibold">
+                  <span class="text-slate-300 font-mono">JavaScript (ES6+)</span>
+                  <span class="text-indigo-400 font-outfit font-semibold">Advanced</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-indigo-500 h-2 rounded-full w-[85%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-800/80">
+            <span class="text-[10px] font-bold text-slate-500 tracking-wider uppercase font-mono">Languages
+              (Spoken)</span>
+            <div class="flex items-center gap-4 mt-2 text-xs font-semibold text-slate-300 font-outfit">
+              <span>Urdu (Native)</span>
+              <span class="text-slate-650">|</span>
+              <span>English (Basic)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Technologies Card -->
+        <div
+          class="p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl backdrop-blur-sm flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3 class="text-lg font-bold font-outfit text-white">Web Technologies</h3>
+            </div>
+            <div class="space-y-4">
+              <!-- HTML5 / CSS3 -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs font-semibold">
+                  <span class="text-slate-300 font-mono">HTML5 & CSS3</span>
+                  <span class="text-cyan-400 font-outfit">Expert</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-cyan-500 h-2 rounded-full w-[90%]"></div>
+                </div>
+              </div>
+              <!-- Tailwind CSS -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs font-semibold">
+                  <span class="text-slate-300 font-mono">Tailwind CSS</span>
+                  <span class="text-cyan-400 font-outfit font-semibold">Advanced</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-cyan-500 h-2 rounded-full w-[88%]"></div>
+                </div>
+              </div>
+              <!-- React.js -->
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-xs font-semibold">
+                  <span class="text-slate-300 font-mono">React.js</span>
+                  <span class="text-cyan-400 font-outfit">Learning</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                  <div class="bg-cyan-500 h-2 rounded-full w-[45%]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-800/80">
+            <span class="text-[10px] font-bold text-slate-500 tracking-wider uppercase font-mono">Learning Focus</span>
+            <p class="text-xs text-slate-400 mt-1">Currently diving into React components, hooks, and state management.
+            </p>
+          </div>
+        </div>
+
+        <!-- Core Concepts & Tools -->
+        <div
+          class="p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl backdrop-blur-sm flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3 class="text-lg font-bold font-outfit text-white">Concepts & Tools</h3>
+            </div>
+
+            <div class="space-y-4">
+              <!-- OOP -->
+              <div class="flex items-center justify-between text-xs font-semibold">
+                <span class="text-slate-300 font-mono">OOP Concepts</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-slate-850 text-amber-400 border border-slate-700/60 text-[10px] font-outfit">Solid</span>
+              </div>
+              <!-- DS & Algorithms -->
+              <div class="flex items-center justify-between text-xs font-semibold">
+                <span class="text-slate-300 font-mono">Data Structures</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-slate-850 text-amber-400 border border-slate-700/60 text-[10px] font-outfit">Intermediate</span>
+              </div>
+              <!-- Git / GitHub -->
+              <div class="flex items-center justify-between text-xs font-semibold">
+                <span class="text-slate-300 font-mono">Git & GitHub</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-slate-850 text-amber-400 border border-slate-700/60 text-[10px] font-outfit">Competent</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-4 border-t border-slate-800/80">
+            <span class="text-[10px] font-bold text-slate-500 tracking-wider uppercase font-mono">Academic CS
+              Prep</span>
+            <p class="text-xs text-slate-400 mt-1">Strengthened via university OOP/DSA modules and Harvard CS50
+              curriculum.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 border-t border-slate-800/40 scroll-mt-20">
+      <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400 font-mono">Projects</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-outfit text-white">Selected Works</h2>
+        <div class="h-1 w-16 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mt-2"></div>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex justify-center items-center gap-3 mb-12 flex-wrap font-outfit">
+        <button id="filterBtnAll"
+          class="project-filter-btn px-4 py-2 text-xs font-bold rounded-lg uppercase tracking-wider transition-all duration-200 bg-gradient-to-r from-indigo-500 to-cyan-500 text-[#0b1120] shadow shadow-cyan-900/30">All</button>
+        <button id="filterBtnApps"
+          class="project-filter-btn px-4 py-2 text-xs font-bold rounded-lg uppercase tracking-wider transition-all duration-200 border border-slate-800 hover:border-slate-650 bg-slate-900/20 text-slate-300">Web
+          Apps</button>
+        <button id="filterBtnApis"
+          class="project-filter-btn px-4 py-2 text-xs font-bold rounded-lg uppercase tracking-wider transition-all duration-200 border border-slate-800 hover:border-slate-650 bg-slate-900/20 text-slate-300">APIs
+          & Logic</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projectsContainer">
+
+        <!-- Project 1: JS Smart To Do List -->
+        <div
+          class="project-card group flex flex-col justify-between p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-950/20 hover:-translate-y-1 transition-all duration-300"
+          data-category="apps">
+          <div class="space-y-4">
+            <div class="flex justify-between items-start">
+              <div
+                class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                <i class="fas fa-tasks text-xl"></i>
+              </div>
+              <span
+                class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-cyan-950/30 border border-cyan-900/40 text-cyan-400 font-mono">Web
+                App</span>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold font-outfit text-white group-hover:text-cyan-400 transition-colors">JS Smart
+                To Do List</h3>
+              <p class="text-sm text-slate-400 font-light leading-relaxed">
+                Developed a responsive task management web application in vanilla JavaScript featuring custom task
+                creation, deletion, completion toggles, and dynamic DOM states.
+              </p>
+            </div>
+
+            <ul class="space-y-1 text-xs text-slate-300 font-light">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-[10px]"></i> LocalStorage
+                persistence for saving tasks</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-[10px]"></i> Task filtering
+                by categories and search</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-[10px]"></i> Advanced
+                JavaScript DOM manipulation & event handlers</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">HTML</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">CSS</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">JavaScript</span>
+            </div>
+            <a href="https://github.com/muhammad-wasi-faiz/World-of-Javascript/tree/main/JS%20Smart%20To%20Do%20App"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-white transition-colors font-outfit"
+              aria-label="Visit Smart To Do List repository">
+              Repo
+              <i
+                class="fas fa-external-link-alt text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: JS Weather Application -->
+        <div
+          class="project-card group flex flex-col justify-between p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-950/20 hover:-translate-y-1 transition-all duration-300"
+          data-category="apis">
+          <div class="space-y-4">
+            <div class="flex justify-between items-start">
+              <div
+                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                <i class="fas fa-cloud-sun-rain text-xl"></i>
+              </div>
+              <span
+                class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-indigo-950/30 border border-indigo-900/40 text-indigo-400 font-mono">API
+                Project</span>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold font-outfit text-white group-hover:text-cyan-400 transition-colors">JS
+                Weather Application</h3>
+              <p class="text-sm text-slate-400 font-light leading-relaxed">
+                Built an interactive, responsive weather dashboard that integrates with the OpenWeather API to retrieve
+                real-time weather information and forecast details dynamically.
+              </p>
+            </div>
+
+            <ul class="space-y-1 text-xs text-slate-300 font-light">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-[10px]"></i> Asynchronous
+                API integration using Fetch API & Promises</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-[10px]"></i> City name
+                weather search with validation and error layouts</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-[10px]"></i> Dynamic icon
+                updates matching real-time weather states</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">HTML</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">CSS</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">OpenWeather API</span>
+            </div>
+            <a href="https://github.com/muhammad-wasi-faiz/World-of-Javascript/tree/main/JS%20Weather-Api%20Project"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-white transition-colors font-outfit"
+              aria-label="Visit Weather Application repository">
+              Repo
+              <i
+                class="fas fa-external-link-alt text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3: JS News Application -->
+        <div
+          class="project-card group flex flex-col justify-between p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-950/20 hover:-translate-y-1 transition-all duration-300"
+          data-category="apis">
+          <div class="space-y-4">
+            <div class="flex justify-between items-start">
+              <div
+                class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 transition-transform">
+                <i class="fas fa-newspaper text-xl"></i>
+              </div>
+              <span
+                class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-indigo-950/30 border border-indigo-900/40 text-indigo-400 font-mono">API
+                Project</span>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold font-outfit text-white group-hover:text-cyan-400 transition-colors">JS News
+                Application</h3>
+              <p class="text-sm text-slate-400 font-light leading-relaxed">
+                Created a dynamic news portal that aggregates the latest global headlines. Connects to a news REST API
+                to fetch, search, filter, and render news cards instantly.
+              </p>
+            </div>
+
+            <ul class="space-y-1 text-xs text-slate-300 font-light">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-[10px]"></i> Asynchronous
+                JS state rendering with error handlers</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-[10px]"></i> Category tabs
+                filtering (Tech, Sports, Business, etc.)</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-400 text-[10px]"></i> Responsive
+                image grid cards & card-skeleton loading</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">HTML</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">JavaScript</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">REST API</span>
+            </div>
+            <a href="https://github.com/muhammad-wasi-faiz/World-of-Javascript/tree/main/JS%20New%20Api%20Project"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-white transition-colors font-outfit"
+              aria-label="Visit News Application repository">
+              Repo
+              <i
+                class="fas fa-external-link-alt text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Shoe Mart -->
+        <div
+          class="project-card group flex flex-col justify-between p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-950/20 hover:-translate-y-1 transition-all duration-300"
+          data-category="apps">
+          <div class="space-y-4">
+            <div class="flex justify-between items-start">
+              <div
+                class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+                <i class="fas fa-shopping-bag text-xl"></i>
+              </div>
+              <span
+                class="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-cyan-950/30 border border-cyan-900/40 text-cyan-400 font-mono">E-Commerce
+                UI</span>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xl font-bold font-outfit text-white group-hover:text-cyan-400 transition-colors">Shoe Mart
+              </h3>
+              <p class="text-sm text-slate-400 font-light leading-relaxed">
+                Designed a premium, responsive frontend shoe store interface. Showcases an interactive landing page,
+                modern layouts, product cards, and filter systems.
+              </p>
+            </div>
+
+            <ul class="space-y-1 text-xs text-slate-300 font-light">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-[10px]"></i> Polished CSS
+                styling & interactive product filter controls</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-[10px]"></i> User-focused
+                layouts, pricing cards, and animations</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500 text-[10px]"></i> Structured web
+                standards for layout spacing</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">HTML</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">CSS</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-slate-805 text-slate-400 font-mono">Web Design</span>
+            </div>
+            <a href="https://github.com/muhammad-wasi-faiz/World-of-Javascript/tree/main/Shoe-Mart" target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-white transition-colors font-outfit"
+              aria-label="Visit Shoe Mart repository">
+              Repo
+              <i
+                class="fas fa-external-link-alt text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Education / Experience Section -->
+    <section id="experience" class="py-20 border-t border-slate-800/40 scroll-mt-20">
+      <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400 font-mono">Education</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-outfit text-white">Education & Timeline</h2>
+        <div class="h-1 w-16 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mt-2"></div>
+      </div>
+
+      <!-- Timeline layout -->
+      <div class="relative border-l border-slate-800 max-w-3xl mx-auto pl-8 sm:pl-10 py-4">
+
+        <!-- Timeline Item 1 -->
+        <div class="relative mb-12">
+          <!-- Connector dot -->
+          <div
+            class="absolute -left-[41px] sm:-left-[49px] top-1.5 w-6 h-6 rounded-full bg-[#0b1120] border-2 border-cyan-500 flex items-center justify-center shadow-lg shadow-cyan-900/30">
+            <span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+          </div>
+
+          <span
+            class="inline-block px-3 py-1 bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-semibold rounded-full font-mono mb-4">2023
+            – 2027</span>
+          <div
+            class="p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl backdrop-blur-sm space-y-3 hover:border-slate-700/80 transition-colors">
+            <div class="flex justify-between items-start flex-wrap gap-2">
+              <div>
+                <h3 class="text-xl font-bold font-outfit text-white">Bachelor of Science in Software Engineering</h3>
+                <p class="text-sm font-semibold text-slate-300">COMSATS University Islamabad, Sahiwal Campus</p>
+              </div>
+              <span
+                class="text-xs font-bold bg-slate-800 border border-slate-700 text-slate-300 px-3 py-1 rounded font-outfit">CGPA:
+                3.38</span>
+            </div>
+
+            <p class="text-sm text-slate-400 font-light leading-relaxed">
+              Studying core software engineering curriculum, with a focus on designing, testing, implementing, and
+              maintaining software structures. Maintaining an excellent CGPA of 3.38 while engaging in practical
+              application of concepts.
+            </p>
+
+            <div class="pt-2">
+              <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 font-mono mb-2">Key Focus Areas:
+              </h4>
+              <div class="flex flex-wrap gap-1.5 text-xs text-slate-400">
+                <span class="px-2.5 py-1 rounded bg-slate-805/40">Object-Oriented Programming (OOP)</span>
+                <span class="px-2.5 py-1 rounded bg-slate-805/40">Data Structures & Algorithms</span>
+                <span class="px-2.5 py-1 rounded bg-slate-805/40">Frontend Design System</span>
+                <span class="px-2.5 py-1 rounded bg-slate-805/40">Git Version Control</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="relative">
+          <!-- Connector dot -->
+          <div
+            class="absolute -left-[41px] sm:-left-[49px] top-1.5 w-6 h-6 rounded-full bg-[#0b1120] border-2 border-indigo-500 flex items-center justify-center shadow-lg shadow-indigo-900/30">
+            <span class="w-2.5 h-2.5 rounded-full bg-indigo-400"></span>
+          </div>
+
+          <span
+            class="inline-block px-3 py-1 bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 text-xs font-semibold rounded-full font-mono mb-4">Independent
+            Study</span>
+          <div
+            class="p-6 bg-slate-900/40 border border-slate-800/60 rounded-2xl backdrop-blur-sm space-y-3 hover:border-slate-700/80 transition-colors">
+            <div>
+              <h3 class="text-xl font-bold font-outfit text-white">Computer Science Foundations & React</h3>
+              <p class="text-sm font-semibold text-slate-300">Harvard CS50 & Self-paced Learning</p>
+            </div>
+
+            <p class="text-sm text-slate-400 font-light leading-relaxed">
+              Consistently auditing Harvard's CS50 Intro to Computer Science to strengthen understanding of memory
+              management, algorithms, data structures, and standard libraries. Self-studying React.js ecosystem to move
+              beyond vanilla layouts to scalable component architectures.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 border-t border-slate-800/40 scroll-mt-20">
+      <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-cyan-400 font-mono">Contact</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-outfit text-white">Get In Touch</h2>
+        <div class="h-1 w-16 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch max-w-5xl mx-auto">
+        <!-- Contact Info Cards -->
+        <div class="lg:col-span-5 flex flex-col justify-between gap-6">
+          <div class="space-y-4 font-outfit">
+            <h3 class="text-xl font-bold text-white">Let's talk about your next project</h3>
+            <p class="text-sm text-slate-400 font-light leading-relaxed font-sans">
+              I am open to internships, frontend developer positions, collaboration opportunities, or general inquiries.
+              Feel free to contact me directly using the information here or the contact form.
+            </p>
+          </div>
+
+          <div class="space-y-4 pt-4">
+            <!-- Email Item -->
+            <div
+              class="flex gap-4 p-4 bg-slate-900/20 border border-slate-800/50 rounded-xl hover:border-cyan-500/20 transition-colors">
+              <div
+                class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 shrink-0">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="overflow-hidden">
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Email Me</h4>
+                <a href="mailto:m.wasifaizklasson92@gmail.com"
+                  class="text-sm font-semibold text-slate-200 hover:text-cyan-400 transition-colors block truncate font-outfit">m.wasifaizklasson92@gmail.com</a>
+              </div>
+            </div>
+
+            <!-- Phone Item -->
+            <div
+              class="flex gap-4 p-4 bg-slate-900/20 border border-slate-800/50 rounded-xl hover:border-cyan-500/20 transition-colors">
+              <div
+                class="w-10 h-10 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 shrink-0">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Call / Message</h4>
+                <a href="tel:03102401813"
+                  class="text-sm font-semibold text-slate-200 hover:text-indigo-400 transition-colors block font-outfit">03102401813</a>
+              </div>
+            </div>
+
+            <!-- Location Item -->
+            <div
+              class="flex gap-4 p-4 bg-slate-900/20 border border-slate-800/50 rounded-xl hover:border-cyan-500/20 transition-colors">
+              <div
+                class="w-10 h-10 rounded-lg bg-slate-805 border border-slate-700/60 flex items-center justify-center text-slate-400 shrink-0">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Address</h4>
+                <p class="text-sm font-semibold text-slate-200 font-outfit">Sahiwal, Pakistan</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Socials in Contact -->
+          <div class="flex gap-3 pt-4 items-center">
+            <span class="text-xs font-bold text-slate-500 uppercase tracking-widest font-mono">Follow:</span>
+            <a href="https://github.com/muhammad-wasi-faiz" target="_blank" rel="noopener noreferrer"
+              class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-cyan-500 hover:text-[#0b1120] flex items-center justify-center text-slate-300 text-sm transition-all duration-300"
+              aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-wasi-faiz-9b963a310/" target="_blank"
+              rel="noopener noreferrer"
+              class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-indigo-500 hover:text-[#0b1120] flex items-center justify-center text-slate-300 text-sm transition-all duration-300"
+              aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form Column -->
+        <div class="lg:col-span-7 p-8 bg-slate-900/40 border border-slate-800/60 rounded-2xl backdrop-blur-sm relative">
+          <form id="globalContactForm" class="space-y-5" novalidate>
+            <!-- Name Input -->
+            <div class="space-y-1">
+              <label for="contactName" class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Full
+                Name</label>
+              <div class="relative">
+                <input type="text" id="contactName" name="name" required
+                  class="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600 focus:outline-none transition-colors"
+                  placeholder="John Doe">
+                <span class="absolute right-3 top-3.5 text-emerald-400 hidden" id="validNameCheck"><i
+                    class="fas fa-check-circle"></i></span>
+              </div>
+              <p class="text-xs text-red-500 hidden" id="nameError">Full name is required.</p>
+            </div>
+
+            <!-- Email Input -->
+            <div class="space-y-1">
+              <label for="contactEmail"
+                class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Email Address</label>
+              <div class="relative">
+                <input type="email" id="contactEmail" name="email" required
+                  class="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600 focus:outline-none transition-colors"
+                  placeholder="johndoe@example.com">
+                <span class="absolute right-3 top-3.5 text-emerald-400 hidden" id="validEmailCheck"><i
+                    class="fas fa-check-circle"></i></span>
+              </div>
+              <p class="text-xs text-red-500 hidden" id="emailError">Please enter a valid email address.</p>
+            </div>
+
+            <!-- Message Input -->
+            <div class="space-y-1">
+              <label for="contactMessage"
+                class="text-xs font-bold text-slate-400 uppercase tracking-wider font-mono">Message</label>
+              <textarea id="contactMessage" name="message" required rows="5"
+                class="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 rounded-xl px-4 py-3 text-sm text-slate-200 placeholder-slate-600 focus:outline-none transition-colors"
+                placeholder="Hey Wasi, let's connect..."></textarea>
+              <p class="text-xs text-red-500 hidden" id="messageError">Message content is required.</p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitContactBtn"
+              class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-indigo-500 to-cyan-500 text-[#0b1120] font-bold rounded-xl hover:shadow-lg hover:shadow-cyan-500/20 hover:brightness-110 transition-all duration-300 text-sm tracking-wide disabled:opacity-55 disabled:cursor-not-allowed font-outfit">
+              <span id="btnText">Send Message</span>
+              <span id="btnSpinner"
+                class="w-4 h-4 border-2 border-[#0b1120] border-t-transparent rounded-full animate-spin hidden"></span>
+            </button>
+          </form>
+
+          <!-- Toast Alert Success / Error Popup -->
+          <div id="contactToast"
+            class="absolute inset-0 bg-[#0b1120]/95 rounded-2xl flex flex-col items-center justify-center text-center p-8 hidden transition-opacity duration-300">
+            <div
+              class="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-4">
+              <i class="fas fa-check-double animate-bounce"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white font-outfit mb-1">Message Sent Successfully!</h4>
+            <p class="text-xs text-slate-400 max-w-sm mb-6">Thank you for reaching out. I have received your message and
+              will get back to you as soon as possible.</p>
+            <button id="closeToastBtn"
+              class="px-5 py-2.5 rounded-xl border border-slate-700 bg-slate-800 hover:bg-slate-750 text-xs font-semibold text-slate-300 transition-colors font-outfit">Send
+              Another Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/40 bg-slate-950/40 backdrop-blur-sm py-12 mt-20 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex flex-col items-center md:items-start text-center md:text-left gap-1 font-outfit">
+        <span class="text-xl font-bold text-white">MWF</span>
+        <span class="text-xs text-slate-500 font-sans font-light">Muhammad Wasi Faiz &copy; 2026. All rights
+          reserved.</span>
+      </div>
+
+      <div class="flex items-center gap-6 text-sm text-slate-400 font-outfit">
+        <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
+        <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+      </div>
+
+      <div class="flex items-center gap-4 text-slate-400">
+        <a href="https://github.com/muhammad-wasi-faiz" target="_blank" rel="noopener noreferrer"
+          class="hover:text-cyan-400 transition-colors" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-wasi-faiz-9b963a310/" target="_blank" rel="noopener noreferrer"
+          class="hover:text-cyan-400 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:m.wasifaizklasson92@gmail.com" class="hover:text-cyan-400 transition-colors"
+          aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
